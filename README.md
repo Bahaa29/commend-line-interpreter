@@ -1,5 +1,6 @@
 # commend-line-interpreter
 This project by 
+
   -Bahaa elsayed mohy 
   
   -mohamed sayed 
@@ -18,12 +19,14 @@ Description
     1. Your CLI should be written in Java
     2. Your application should contain 2 major classes (Parser, Terminal)
     
- Basic command 
+ Basic command
+ 
     cd
     
     ls
     
-    cp 
+    cp
+    
     cat
     
     more
