@@ -1,7 +1,9 @@
 # commend-line-interpreter
 This project by 
   -Bahaa elsayed mohy 
+  
   -mohamed sayed 
+  
   -Mohamed mahmoud
 
 Description
@@ -17,20 +19,35 @@ Description
     2. Your application should contain 2 major classes (Parser, Terminal)
     
  Basic command 
-    cd 
-    ls 
+    cd
+    
+    ls
+    
     cp 
-    cat 
-    more 
-    Pipe Operator 
-    Redirect Operator < 
-    Redirect Operator << 
-    mkdir 
-    rmdir 
-    mv 
-    rm 
-    args 
-    date 
-    help 
-    pwd 
+    cat
+    
+    more
+    
+    Pipe Operator
+    
+    Redirect Operator <
+    
+    Redirect Operator <<
+    
+    mkdir
+    
+    rmdir
+    
+    mv
+    
+    rm
+    
+    args
+    
+    date
+    
+    help
+    
+    pwd
+    
     clear 
