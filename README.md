@@ -1,13 +1,14 @@
 # commend-line-interpreter
 This project by 
 
-  -Bahaa elsayed mohy 
+  # Bahaa elsayed mohy 
   
-  -mohamed sayed 
+  # Mohamed sayed 
   
-  -Mohamed mahmoud
+  # Mohamed mahmoud
 
-Description
+# Description
+
     In this assignment, you will write a Command Line Interpreter (CLI) for your operating
     system. Your CLI should prompt the user to enter the input through the keyboard. After a
     sequence of characters is entered followed by a return, the string is parsed and the indicated
@@ -19,7 +20,7 @@ Description
     1. Your CLI should be written in Java
     2. Your application should contain 2 major classes (Parser, Terminal)
     
- Basic command
+ # Basic command
  
     cd
     
