@@ -58,7 +58,8 @@
       <workItem from="1605006596070" duration="8473000" />
       <workItem from="1605017541845" duration="7819000" />
       <workItem from="1605029508116" duration="6000" />
-      <workItem from="1605043905491" duration="2202000" />
+      <workItem from="1605043905491" duration="3295000" />
+      <workItem from="1605048367736" duration="2808000" />
     </task>
     <task id="LOCAL-00001" summary="Normal Command Parsing">
       <created>1605021946856</created>
@@ -88,7 +89,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605045625243</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Create rmdir function">
+      <created>1605046126789</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1605046126789</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -99,17 +107,18 @@
     <MESSAGE value="Pipe parsing part 1" />
     <MESSAGE value="Add current_path to Terminal Class" />
     <MESSAGE value="Create mkdir function" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create mkdir function" />
+    <MESSAGE value="Create rmdir function" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create rmdir function" />
   </component>
   <component name="WindowStateProjectService">
     <state x="536" y="254" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1605017560748">
       <screen x="0" y="0" width="1366" height="723" />
     </state>
     <state x="536" y="254" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1366.723@0.0.1366.723" timestamp="1605017560748" />
-    <state x="254" y="0" width="858" height="722" key="CommitChangelistDialog2" timestamp="1605045625094">
+    <state x="254" y="0" width="858" height="722" key="CommitChangelistDialog2" timestamp="1605051485068">
       <screen x="0" y="0" width="1366" height="723" />
     </state>
-    <state x="254" y="0" width="858" height="722" key="CommitChangelistDialog2/0.0.1366.723@0.0.1366.723" timestamp="1605045625094" />
+    <state x="254" y="0" width="858" height="722" key="CommitChangelistDialog2/0.0.1366.723@0.0.1366.723" timestamp="1605051485068" />
     <state x="538" y="278" key="Github.Dialog.Accounts.Choose" timestamp="1605044139758">
       <screen x="0" y="0" width="1366" height="723" />
     </state>
@@ -130,5 +139,9 @@
       <screen x="0" y="0" width="1366" height="723" />
     </state>
     <state x="347" y="158" key="run.anything.popup/0.0.1366.723@0.0.1366.723" timestamp="1605044259479" />
+    <state x="346" y="44" width="672" height="678" key="search.everywhere.popup" timestamp="1605050155432">
+      <screen x="0" y="0" width="1366" height="723" />
+    </state>
+    <state x="346" y="44" width="672" height="678" key="search.everywhere.popup/0.0.1366.723@0.0.1366.723" timestamp="1605050155432" />
   </component>
 </project>
