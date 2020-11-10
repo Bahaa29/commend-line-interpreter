@@ -17,12 +17,23 @@ public class parser
     public boolean parse(String input)
     {
         String command=null;
-        String[] split_args;
+        String[] split_args = null;
 
-
+        //Remain | && > && >> && more
         if(input.contains("|") || input.contains(">") || input.contains(">>") ){
             //Pipes Case
-            
+            boolean pipe_exist = false;
+            if(input.contains("|") == true){
+                pipe_exist = true;
+            }
+            //Pipe Command
+            if(pipe_exist){
+                command = "|";
+                split_args =input.split("|");
+
+            }
+            //> and >> block
+            //here
         }else{
             split_args =input.split(" ");
             command=split_args[0];
@@ -82,6 +93,7 @@ public class parser
                     break;
             }
         }
+        //Save Command And Arguments
         this.args = split_args;
         this.cmd = command;
         return true;
