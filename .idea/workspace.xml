@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f3209ed2-fc9f-434c-88c1-157de209ea86" name="Default Changelist" comment="" />
+    <list default="true" id="f3209ed2-fc9f-434c-88c1-157de209ea86" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/os/parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/os/parser.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,8 +27,10 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
@@ -38,7 +44,10 @@
       </method>
     </configuration>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="f3209ed2-fc9f-434c-88c1-157de209ea86" name="Default Changelist" comment="" />
@@ -48,10 +57,25 @@
       <updated>1604962355726</updated>
       <workItem from="1604962357460" duration="674000" />
       <workItem from="1605006596070" duration="8473000" />
+      <workItem from="1605017541845" duration="4364000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="536" y="254" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1605017560748">
+      <screen x="0" y="0" width="1366" height="723" />
+    </state>
+    <state x="536" y="254" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1366.723@0.0.1366.723" timestamp="1605017560748" />
+    <state x="184" y="0" key="SettingsEditor" timestamp="1605017589741">
+      <screen x="0" y="0" width="1366" height="723" />
+    </state>
+    <state x="184" y="0" key="SettingsEditor/0.0.1366.723@0.0.1366.723" timestamp="1605017589741" />
+    <state x="369" y="190" key="com.intellij.ide.util.TipDialog" timestamp="1605017542766">
+      <screen x="0" y="0" width="1366" height="723" />
+    </state>
+    <state x="369" y="190" key="com.intellij.ide.util.TipDialog/0.0.1366.723@0.0.1366.723" timestamp="1605017542766" />
   </component>
 </project>
