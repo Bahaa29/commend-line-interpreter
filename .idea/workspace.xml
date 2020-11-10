@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f3209ed2-fc9f-434c-88c1-157de209ea86" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/os/parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/os/parser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/os/Terminal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/os/Terminal.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +57,9 @@
       <updated>1604962355726</updated>
       <workItem from="1604962357460" duration="674000" />
       <workItem from="1605006596070" duration="8473000" />
-      <workItem from="1605017541845" duration="7158000" />
+      <workItem from="1605017541845" duration="7819000" />
+      <workItem from="1605029508116" duration="6000" />
+      <workItem from="1605043905491" duration="93000" />
     </task>
     <task id="LOCAL-00001" summary="Normal Command Parsing">
       <created>1605021946856</created>
@@ -65,7 +68,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605021946856</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Pipe parsing part 1">
+      <created>1605024726904</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1605024726904</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -73,21 +83,30 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Normal Command Parsing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Normal Command Parsing" />
+    <MESSAGE value="Pipe parsing part 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pipe parsing part 1" />
   </component>
   <component name="WindowStateProjectService">
     <state x="536" y="254" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1605017560748">
       <screen x="0" y="0" width="1366" height="723" />
     </state>
     <state x="536" y="254" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1366.723@0.0.1366.723" timestamp="1605017560748" />
-    <state x="254" y="0" key="CommitChangelistDialog2" timestamp="1605021946635">
+    <state x="254" y="0" key="CommitChangelistDialog2" timestamp="1605024726831">
       <screen x="0" y="0" width="1366" height="723" />
     </state>
-    <state x="254" y="0" key="CommitChangelistDialog2/0.0.1366.723@0.0.1366.723" timestamp="1605021946635" />
+    <state x="254" y="0" key="CommitChangelistDialog2/0.0.1366.723@0.0.1366.723" timestamp="1605024726831" />
+    <state x="538" y="278" key="Github.Dialog.Accounts.Choose" timestamp="1605024757014">
+      <screen x="0" y="0" width="1366" height="723" />
+    </state>
+    <state x="538" y="278" key="Github.Dialog.Accounts.Choose/0.0.1366.723@0.0.1366.723" timestamp="1605024757014" />
     <state x="184" y="0" key="SettingsEditor" timestamp="1605017589741">
       <screen x="0" y="0" width="1366" height="723" />
     </state>
     <state x="184" y="0" key="SettingsEditor/0.0.1366.723@0.0.1366.723" timestamp="1605017589741" />
+    <state x="283" y="98" key="Vcs.Push.Dialog.v2" timestamp="1605024740453">
+      <screen x="0" y="0" width="1366" height="723" />
+    </state>
+    <state x="283" y="98" key="Vcs.Push.Dialog.v2/0.0.1366.723@0.0.1366.723" timestamp="1605024740453" />
     <state x="369" y="190" key="com.intellij.ide.util.TipDialog" timestamp="1605017542766">
       <screen x="0" y="0" width="1366" height="723" />
     </state>
