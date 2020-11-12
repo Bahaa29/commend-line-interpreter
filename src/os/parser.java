@@ -20,20 +20,10 @@ public class parser
         String command=null;
         String[] split_args = null;
 
-        //Remain | && > && >> && more
         if(input.contains("|"))
         {
-            //Pipes Case
-            boolean pipe_exist = false;
-            if(input.contains("|") == true){
-                pipe_exist = true;
-            }
-            //Pipe Command
-            if(pipe_exist){
-                command = "|";
-                split_args =input.split("|");
-
-            }
+            command = "|";
+            split_args =input.split("|");
         }
         else if(input.contains(">")||input.contains(">>"))
         {
