@@ -16,6 +16,89 @@ public class Terminal
     private static String[] syntax={"cd or cd and put the path", "ls or ls and put the path","rm path","cp file1 file2","mv file1 file2","mikdir{path and name}","rmdir{path and name","clear","more file path","pwd","cat file1 or cat file1 file2","args command name","date","help","[command name][command parameters]>[File Path]","[command name][command parameters]>>[File Path]"};
     private static String [] description ={"changes the current directory to another one " , "lists Directory contents sorted alphabetically " , "removes specified file OR delete a directory and recursively delete its content " , "copies the first file onto the second one but it does not copy directories " ,
             "moves the given file into a file with the same given name " , "creates a directory with the given name " , "removes an existing empty directory " , "clears the current terminal screen " , "Display and scroll down the output in one direction only you can scroll page by page " , "Display current user directory " , "Concatenates files and prints on the standard output" ,"List all command arguments " , "Display Current date/time " , "List all user commands and the syntax of their arguments", "Redirct output to be written to the given file (create file if doesn't exist and replace if exists)","Redirct output to be written to the given file (create file if doesn't exist and Append if exists)"};
+    public String pwd() {
+        return current_path;
+    }
+
+    public void cd() {
+        current_path = "D:\\";
+    }
+
+    public void cd(String arg) {
+        File file = new File(arg);
+        boolean flag = file.isDirectory();
+        if (flag) {
+            current_path+=arg;
+        }
+        else{
+            System.out.println("Invalid Directory path");
+        }
+    }
+    public String[] ls() {
+        File file1 = new File(current_path);
+        boolean flag = file1.isDirectory();
+        String[] list = file1.list();
+        return list;
+    }
+
+    public String[] ls(String arg) {
+        File file2 = new File(arg);
+        boolean flag = file2.isDirectory();
+        String[] list = null;
+        if (flag) {
+            list = file2.list();
+            return list;
+        }
+        else{
+            System.out.println("Invalid path");
+            return list;
+        }
+    }
+    public void more(String file_name) {
+        String s = "";
+        try {
+            File my_file = new File(file_name);
+            Scanner Reader = new Scanner(my_file);
+            while (Reader.hasNextLine()) {
+                String data = Reader.nextLine();
+                s+=data;
+            }
+            Reader.close();
+        } catch (Exception e) {
+            System.out.println("Error.");
+            e.printStackTrace();
+        }
+        //System.out.println(s.length());
+        if (s.length()>1000) {
+            for (int i =0; i<4 ; i++){
+                switch (i){
+                    case 0:
+                        System.out.println(s.substring(0, s.length()/4));
+                        break;
+                    case 1:
+                        System.out.println(s.substring(s.length()/4, s.length()/2));
+                        break;
+                    case 2:
+                        System.out.println(s.substring(s.length()/2, 3*(s.length())/4));
+                        break;
+                    case 3:
+                        System.out.println(s.substring((3*(s.length())/4), s.length()));
+                        break;
+                }
+                if (i==3)
+                    break;
+                System.out.println("If you want to continue press 'c' or any key");
+                System.out.println("If you want to quit press 'q'");
+                Scanner scan = new Scanner(System.in);
+                String in = scan.nextLine();
+                if (in.equalsIgnoreCase("q"))
+                    break;
+            }
+        }
+        else{
+            System.out.println(s);
+        }
+    }
     public void cp(String file1,String file2)
     {
         File InFile=new File(file1);
