@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f3209ed2-fc9f-434c-88c1-157de209ea86" name="Default Changelist" comment="">
+    <list default="true" id="f3209ed2-fc9f-434c-88c1-157de209ea86" name="Default Changelist" comment="Create mv function">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/os/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/os/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/os/Terminal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/os/Terminal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/os/parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/os/parser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +22,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="961a5004-155b-4bfb-a7c6-5802ffa6b01a" />
+  </component>
   <component name="ProjectId" id="1k4aWuwq0dSmTbfnTliqIYmKYoT" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -29,7 +34,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
@@ -42,6 +47,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
@@ -59,7 +69,10 @@
       <workItem from="1605017541845" duration="7819000" />
       <workItem from="1605029508116" duration="6000" />
       <workItem from="1605043905491" duration="3295000" />
-      <workItem from="1605048367736" duration="2808000" />
+      <workItem from="1605048367736" duration="4577000" />
+      <workItem from="1605091251059" duration="14276000" />
+      <workItem from="1605143936419" duration="7340000" />
+      <workItem from="1605182862844" duration="3297000" />
     </task>
     <task id="LOCAL-00001" summary="Normal Command Parsing">
       <created>1605021946856</created>
@@ -96,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605046126789</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Create mv function">
+      <created>1605051502692</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1605051502692</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -108,40 +128,57 @@
     <MESSAGE value="Add current_path to Terminal Class" />
     <MESSAGE value="Create mkdir function" />
     <MESSAGE value="Create rmdir function" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create rmdir function" />
+    <MESSAGE value="Create mv function" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create mv function" />
   </component>
   <component name="WindowStateProjectService">
     <state x="536" y="254" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1605017560748">
       <screen x="0" y="0" width="1366" height="723" />
     </state>
     <state x="536" y="254" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1366.723@0.0.1366.723" timestamp="1605017560748" />
-    <state x="254" y="0" width="858" height="722" key="CommitChangelistDialog2" timestamp="1605051485068">
+    <state x="254" y="0" width="858" height="722" key="CommitChangelistDialog2" timestamp="1605100287141">
       <screen x="0" y="0" width="1366" height="723" />
     </state>
-    <state x="254" y="0" width="858" height="722" key="CommitChangelistDialog2/0.0.1366.723@0.0.1366.723" timestamp="1605051485068" />
-    <state x="538" y="278" key="Github.Dialog.Accounts.Choose" timestamp="1605044139758">
+    <state x="254" y="0" width="858" height="722" key="CommitChangelistDialog2/0.0.1366.723@0.0.1366.723" timestamp="1605100287141" />
+    <state x="538" y="278" key="Github.Dialog.Accounts.Choose" timestamp="1605051529756">
       <screen x="0" y="0" width="1366" height="723" />
     </state>
-    <state x="538" y="278" key="Github.Dialog.Accounts.Choose/0.0.1366.723@0.0.1366.723" timestamp="1605044139758" />
-    <state x="184" y="0" key="SettingsEditor" timestamp="1605045714194">
+    <state x="538" y="278" key="Github.Dialog.Accounts.Choose/0.0.1366.723@0.0.1366.723" timestamp="1605051529756" />
+    <state width="1320" height="168" key="GridCell.Tab.0.bottom" timestamp="1605141746689">
       <screen x="0" y="0" width="1366" height="723" />
     </state>
-    <state x="184" y="0" key="SettingsEditor/0.0.1366.723@0.0.1366.723" timestamp="1605045714194" />
-    <state x="283" y="98" width="800" height="527" key="Vcs.Push.Dialog.v2" timestamp="1605044065725">
+    <state width="1320" height="168" key="GridCell.Tab.0.bottom/0.0.1366.723@0.0.1366.723" timestamp="1605141746689" />
+    <state width="1320" height="168" key="GridCell.Tab.0.center" timestamp="1605141746688">
       <screen x="0" y="0" width="1366" height="723" />
     </state>
-    <state x="283" y="98" width="800" height="527" key="Vcs.Push.Dialog.v2/0.0.1366.723@0.0.1366.723" timestamp="1605044065725" />
+    <state width="1320" height="168" key="GridCell.Tab.0.center/0.0.1366.723@0.0.1366.723" timestamp="1605141746688" />
+    <state width="1320" height="168" key="GridCell.Tab.0.left" timestamp="1605141746688">
+      <screen x="0" y="0" width="1366" height="723" />
+    </state>
+    <state width="1320" height="168" key="GridCell.Tab.0.left/0.0.1366.723@0.0.1366.723" timestamp="1605141746688" />
+    <state width="1320" height="168" key="GridCell.Tab.0.right" timestamp="1605141746688">
+      <screen x="0" y="0" width="1366" height="723" />
+    </state>
+    <state width="1320" height="168" key="GridCell.Tab.0.right/0.0.1366.723@0.0.1366.723" timestamp="1605141746688" />
+    <state x="184" y="0" key="SettingsEditor" timestamp="1605124568608">
+      <screen x="0" y="0" width="1366" height="723" />
+    </state>
+    <state x="184" y="0" key="SettingsEditor/0.0.1366.723@0.0.1366.723" timestamp="1605124568608" />
+    <state x="283" y="98" width="800" height="527" key="Vcs.Push.Dialog.v2" timestamp="1605096604554">
+      <screen x="0" y="0" width="1366" height="723" />
+    </state>
+    <state x="283" y="98" width="800" height="527" key="Vcs.Push.Dialog.v2/0.0.1366.723@0.0.1366.723" timestamp="1605096604554" />
     <state x="369" y="190" key="com.intellij.ide.util.TipDialog" timestamp="1605017542766">
       <screen x="0" y="0" width="1366" height="723" />
     </state>
     <state x="369" y="190" key="com.intellij.ide.util.TipDialog/0.0.1366.723@0.0.1366.723" timestamp="1605017542766" />
-    <state x="347" y="158" key="run.anything.popup" timestamp="1605044259479">
+    <state x="347" y="158" key="run.anything.popup" timestamp="1605106805295">
       <screen x="0" y="0" width="1366" height="723" />
     </state>
-    <state x="347" y="158" key="run.anything.popup/0.0.1366.723@0.0.1366.723" timestamp="1605044259479" />
-    <state x="346" y="44" width="672" height="678" key="search.everywhere.popup" timestamp="1605050155432">
+    <state x="347" y="158" key="run.anything.popup/0.0.1366.723@0.0.1366.723" timestamp="1605106805295" />
+    <state x="346" y="44" width="672" height="678" key="search.everywhere.popup" timestamp="1605145946555">
       <screen x="0" y="0" width="1366" height="723" />
     </state>
-    <state x="346" y="44" width="672" height="678" key="search.everywhere.popup/0.0.1366.723@0.0.1366.723" timestamp="1605050155432" />
+    <state x="346" y="44" width="672" height="678" key="search.everywhere.popup/0.0.1366.723@0.0.1366.723" timestamp="1605145946555" />
   </component>
 </project>

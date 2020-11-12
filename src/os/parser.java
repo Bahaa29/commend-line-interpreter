@@ -7,6 +7,7 @@ public class parser
 {
     String[] args;
     String cmd=null;
+
     /**
      * Parse Function
      * this function take a command line from the user and split it into two parts command saved in cmd
@@ -20,7 +21,8 @@ public class parser
         String[] split_args = null;
 
         //Remain | && > && >> && more
-        if(input.contains("|") || input.contains(">") || input.contains(">>") ){
+        if(input.contains("|"))
+        {
             //Pipes Case
             boolean pipe_exist = false;
             if(input.contains("|") == true){
@@ -32,9 +34,23 @@ public class parser
                 split_args =input.split("|");
 
             }
-            //> and >> block
-            //here
-        }else{
+        }
+        else if(input.contains(">")||input.contains(">>"))
+        {
+            if(input.contains(">"))
+            {
+                split_args = input.split(">");
+                command=">";
+            }
+
+            else
+            {
+                split_args=input.split(">>");
+                command=">>";
+            }
+
+        }
+        else{
             split_args =input.split(" ");
             command=split_args[0];
             split_args = Arrays.copyOfRange(split_args,1,split_args.length -1);
@@ -60,7 +76,13 @@ public class parser
                         return false;
                     }
                     break;
+                case "more":
                 case "ls":
+                    if(split_args.length > 1){
+                        System.out.println("Too much args!");
+                        return false;
+                    }
+                    break;
                 case "pwd":
                 case "help":
                 case "clear":
@@ -81,8 +103,6 @@ public class parser
                     }
                     break;
                 case "mkdir":
-                case "cat":
-                case "more":
                 case "rmdir":
                 case "rm":
                 case "args":
@@ -98,12 +118,12 @@ public class parser
         this.cmd = command;
         return true;
     }
-    public String[] getArguments(String command)
+    public String[] getArguments()
     {
         return args;
     }
 
-    public String getCmd(String input)
+    public String getCmd()
     {
         return cmd;
     }
