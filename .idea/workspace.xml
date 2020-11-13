@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f3209ed2-fc9f-434c-88c1-157de209ea86" name="Default Changelist" comment="Create mv function">
+    <list default="true" id="f3209ed2-fc9f-434c-88c1-157de209ea86" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/os/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/os/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/os/Terminal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/os/Terminal.java" afterDir="false" />
@@ -70,7 +70,7 @@
       <workItem from="1605091251059" duration="14276000" />
       <workItem from="1605143936419" duration="7340000" />
       <workItem from="1605182862844" duration="3297000" />
-      <workItem from="1605214482267" duration="7359000" />
+      <workItem from="1605214482267" duration="13232000" />
     </task>
     <task id="LOCAL-00001" summary="Normal Command Parsing">
       <created>1605021946856</created>
@@ -114,7 +114,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605051502692</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="All Functions is Done except clear">
+      <created>1605221887918</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1605221887918</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,37 +134,54 @@
     <MESSAGE value="Create mkdir function" />
     <MESSAGE value="Create rmdir function" />
     <MESSAGE value="Create mv function" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create mv function" />
+    <MESSAGE value="All Functions is Done except clear" />
+    <option name="LAST_COMMIT_MESSAGE" value="All Functions is Done except clear" />
   </component>
   <component name="WindowStateProjectService">
     <state x="536" y="254" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1605017560748">
       <screen x="0" y="0" width="1366" height="723" />
     </state>
     <state x="536" y="254" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1366.723@0.0.1366.723" timestamp="1605017560748" />
-    <state x="254" y="0" width="858" height="722" key="CommitChangelistDialog2" timestamp="1605100287141">
+    <state x="254" y="0" width="858" height="722" key="CommitChangelistDialog2" timestamp="1605221887708">
       <screen x="0" y="0" width="1366" height="723" />
     </state>
-    <state x="254" y="0" width="858" height="722" key="CommitChangelistDialog2/0.0.1366.723@0.0.1366.723" timestamp="1605100287141" />
+    <state x="254" y="0" width="858" height="722" key="CommitChangelistDialog2/0.0.1366.723@0.0.1366.723" timestamp="1605221887708" />
     <state x="538" y="278" key="Github.Dialog.Accounts.Choose" timestamp="1605051529756">
       <screen x="0" y="0" width="1366" height="723" />
     </state>
     <state x="538" y="278" key="Github.Dialog.Accounts.Choose/0.0.1366.723@0.0.1366.723" timestamp="1605051529756" />
-    <state width="1320" height="168" key="GridCell.Tab.0.bottom" timestamp="1605141746689">
+    <state width="1320" height="129" key="GridCell.Tab.0.bottom" timestamp="1605227726260">
       <screen x="0" y="0" width="1366" height="723" />
     </state>
-    <state width="1320" height="168" key="GridCell.Tab.0.bottom/0.0.1366.723@0.0.1366.723" timestamp="1605141746689" />
-    <state width="1320" height="168" key="GridCell.Tab.0.center" timestamp="1605141746688">
+    <state width="1320" height="129" key="GridCell.Tab.0.bottom/0.0.1366.723@0.0.1366.723" timestamp="1605227726260" />
+    <state width="1320" height="129" key="GridCell.Tab.0.center" timestamp="1605227726259">
       <screen x="0" y="0" width="1366" height="723" />
     </state>
-    <state width="1320" height="168" key="GridCell.Tab.0.center/0.0.1366.723@0.0.1366.723" timestamp="1605141746688" />
-    <state width="1320" height="168" key="GridCell.Tab.0.left" timestamp="1605141746688">
+    <state width="1320" height="129" key="GridCell.Tab.0.center/0.0.1366.723@0.0.1366.723" timestamp="1605227726259" />
+    <state width="1320" height="129" key="GridCell.Tab.0.left" timestamp="1605227726259">
       <screen x="0" y="0" width="1366" height="723" />
     </state>
-    <state width="1320" height="168" key="GridCell.Tab.0.left/0.0.1366.723@0.0.1366.723" timestamp="1605141746688" />
-    <state width="1320" height="168" key="GridCell.Tab.0.right" timestamp="1605141746688">
+    <state width="1320" height="129" key="GridCell.Tab.0.left/0.0.1366.723@0.0.1366.723" timestamp="1605227726259" />
+    <state width="1320" height="129" key="GridCell.Tab.0.right" timestamp="1605227726260">
       <screen x="0" y="0" width="1366" height="723" />
     </state>
-    <state width="1320" height="168" key="GridCell.Tab.0.right/0.0.1366.723@0.0.1366.723" timestamp="1605141746688" />
+    <state width="1320" height="129" key="GridCell.Tab.0.right/0.0.1366.723@0.0.1366.723" timestamp="1605227726260" />
+    <state width="1320" height="211" key="GridCell.Tab.1.bottom" timestamp="1605222692703">
+      <screen x="0" y="0" width="1366" height="723" />
+    </state>
+    <state width="1320" height="211" key="GridCell.Tab.1.bottom/0.0.1366.723@0.0.1366.723" timestamp="1605222692703" />
+    <state width="1320" height="211" key="GridCell.Tab.1.center" timestamp="1605222692703">
+      <screen x="0" y="0" width="1366" height="723" />
+    </state>
+    <state width="1320" height="211" key="GridCell.Tab.1.center/0.0.1366.723@0.0.1366.723" timestamp="1605222692703" />
+    <state width="1320" height="211" key="GridCell.Tab.1.left" timestamp="1605222692703">
+      <screen x="0" y="0" width="1366" height="723" />
+    </state>
+    <state width="1320" height="211" key="GridCell.Tab.1.left/0.0.1366.723@0.0.1366.723" timestamp="1605222692703" />
+    <state width="1320" height="211" key="GridCell.Tab.1.right" timestamp="1605222692703">
+      <screen x="0" y="0" width="1366" height="723" />
+    </state>
+    <state width="1320" height="211" key="GridCell.Tab.1.right/0.0.1366.723@0.0.1366.723" timestamp="1605222692703" />
     <state x="184" y="0" key="SettingsEditor" timestamp="1605124568608">
       <screen x="0" y="0" width="1366" height="723" />
     </state>

@@ -7,6 +7,7 @@ public class parser
 {
     String[] args;
     String cmd=null;
+    public int length=0;
 
     /**
      * Parse Function
@@ -19,7 +20,6 @@ public class parser
     {
         String command=null;
         String[] split_args = null;
-
         if(input.contains("|"))
         {
             command = "|";
@@ -43,7 +43,8 @@ public class parser
         else{
             split_args =input.split(" ");
             command=split_args[0];
-            split_args = Arrays.copyOfRange(split_args,1,split_args.length -1);
+            this.length = split_args.length -1;
+//            System.out.println(length);
             String[] commands = {"cd" , "ls" , "cp" , "cat" ,"more" ,"mkdir" ,"rmdir" ,"mv","rm","args","date"
                     ,"help","pwd","clear"};
 
@@ -61,14 +62,14 @@ public class parser
             //Validation of the count of args
             switch (command){
                 case "cd":
-                    if(split_args.length != 1 || split_args.length != 0){
+                    if(length > 1){
                         System.out.println("Invalid Command Arguments!");
                         return false;
                     }
                     break;
                 case "more":
                 case "ls":
-                    if(split_args.length > 1){
+                    if(length > 1){
                         System.out.println("Too much args!");
                         return false;
                     }
@@ -77,15 +78,15 @@ public class parser
                 case "help":
                 case "clear":
                 case "date":
-                    if(split_args.length > 0){
+                    if(length > 1){
                         System.out.println("Commands Dosn't Take Any Arguments!");
                         return false;
                     }
                     break;
                 case "cp":
                 case "mv":
-                    if(split_args.length != 2){
-                        if(split_args.length < 2)
+                    if(length != 2){
+                        if(length < 2)
                             System.out.println("Too Few Arguments!");
                         else
                             System.out.println("Too Much Argument!");
@@ -96,7 +97,7 @@ public class parser
                 case "rmdir":
                 case "rm":
                 case "args":
-                    if(split_args.length != 1){
+                    if(length != 1){
                         System.out.println("Invalid Command Arguments!");
                         return false;
                     }

@@ -49,6 +49,7 @@ public class Terminal
     public void more(String file_name) {
         String s = "";
         try {
+            file_name = checkDir(file_name);
             File my_file = new File(file_name);
             Scanner Reader = new Scanner(my_file);
             while (Reader.hasNextLine()) {
@@ -90,6 +91,7 @@ public class Terminal
         }
     }
     public void cp(String file1,String file2) {
+        file1 = checkDir(file1);
         File InFile=new File(file1);
         File OutFile=new File(file2);
         if(InFile.exists())
@@ -112,6 +114,7 @@ public class Terminal
             {
                 System.out.println(e.getMessage());
             }
+            System.out.println("Copy Done");
         }
         else
             System.out.println("the file u want to copy is not exist");
@@ -427,17 +430,18 @@ public class Terminal
         String line2;
         String line = "";
         try {
-            for (int i = 0; i < files_name.length; i++) {
+            for (int i = 1; i < files_name.length; i++) {
+                files_name[i] = checkDir(files_name[i]);
                 File myfile = new File(files_name[i]);
                 Scanner reader = new Scanner(myfile);
 
                 while ((reader.hasNextLine())) {
                     line2 = reader.nextLine();
 
-                    System.out.println(line2);
+                    //System.out.println(line2);
                     line +=  line2+System.lineSeparator();
                 }
-                System.out.println("************************************");
+                //System.out.println("************************************");
                 reader.close();
                 line +="///////////////////////////////////////////////"+System.lineSeparator() ;
             }
