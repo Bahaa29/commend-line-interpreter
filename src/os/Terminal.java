@@ -4,8 +4,10 @@ import javax.print.attribute.standard.Destination;
 import java.io.*;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.Scanner;
 
-public class Terminal {
+public class Terminal
+{
     //This Variable Just Point To The Folder Where iam
     private String current_path = "/home/mohamed/";
     File cur_dir=new File(current_path);
@@ -341,4 +343,81 @@ public class Terminal {
             }
         }
     }
+
+    public String cat(String[] files_name ) throws FileNotFoundException {
+        
+        String line2;
+        String line = "";
+        try {
+
+            for (int i = 0; i < files_name.length; i++) {
+                File myfile = new File(files_name[i]);
+                Scanner reader = new Scanner(myfile);
+
+                while ((reader.hasNextLine())) {
+                    line2 = reader.nextLine();
+
+                    System.out.println(line2);
+                    line +=  line2+System.lineSeparator();
+
+                }
+
+
+                System.out.println("************************************");
+                reader.close();
+                line +="///////////////////////////////////////////////"+System.lineSeparator() ;
+
+
+            }
+
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+
+        return line;
+
+    }
+
+    public void args(String commnde1) {
+
+
+        if (commnde1.equals("cd")) {
+            System.out.println("args[1]:Destination path");
+        }
+        else if (commnde1.equals("cp")) {
+            System.out.println("args[1]:orginal file");
+            System.out.println("args[2]: copy file");
+        }
+        else  if (commnde1.equals("mv")) {
+            System.out.println("args[1]:frist file");
+            System.out.println("args[1]: secand file");
+        }
+        else  if (commnde1.equals("rm")) {
+            System.out.println("args[1]:removed file");
+        }
+        else if (commnde1.equals("mkdir")) {
+            System.out.println("args[1]:maked folder");
+        }
+        else if (commnde1.equals("rmdir")) {
+            System.out.println("args[1]:removed folder");
+        }
+        else if (commnde1.equals("more")) {
+            System.out.println("args[1]:frist file ");
+        }
+        else if (commnde1.equals("<")) {
+            System.out.println("args[1]:path file ");
+        }
+        else if (commnde1.equals("<<")) {
+            System.out.println("args[1]:path file ");
+        }
+
+
+    }
+
+    public static void clear()
+    {Main g=new Main();
+        String[] args=null;
+        g.clear1(args);
+    }
+
 }

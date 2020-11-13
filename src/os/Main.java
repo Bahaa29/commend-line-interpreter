@@ -10,4 +10,9 @@ public class Main {
         //terminal.mv("/home/mohamed/test.txt","/home/Desktop/test.txt");
         //terminal.pipe();
     }
+    public static void clear1(String []args1)
+    {
+        System.out.println("you are restarted");
+        main(args1);
+    }
 }

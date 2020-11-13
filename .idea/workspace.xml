@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/os/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/os/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/os/Terminal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/os/Terminal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/os/parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/os/parser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,9 +20,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GithubDefaultAccount">
-    <option name="defaultAccountId" value="961a5004-155b-4bfb-a7c6-5802ffa6b01a" />
   </component>
   <component name="ProjectId" id="1k4aWuwq0dSmTbfnTliqIYmKYoT" />
   <component name="ProjectViewState">
@@ -52,6 +48,18 @@
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
