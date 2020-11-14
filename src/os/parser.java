@@ -23,7 +23,9 @@ public class parser
         if(input.contains("|"))
         {
             command = "|";
-            split_args =input.split("|");
+            split_args =input.split("\\|");
+            for (int i=0;i<split_args.length;i++)
+                split_args[i] = split_args[i].trim();
         }
         else if(input.contains(">")||input.contains(">>"))
         {

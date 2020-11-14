@@ -33,7 +33,6 @@ public class Terminal
             for (int i=0;i<current_path.length()-lastfolder_len;i++){
                 previous_folder += current_path.charAt(i);
             }
-            System.out.println(previous_folder);
             current_path = previous_folder;
         }else{
             arg = checkDir(arg);
@@ -64,19 +63,24 @@ public class Terminal
         }
         return list;
     }
-    public void more(String file_name) {
+    public void more(String file_name,Boolean is_path) {
         String s = "";
-        try {
-            file_name = checkDir(file_name);
-            File my_file = new File(file_name);
-            Scanner Reader = new Scanner(my_file);
-            while (Reader.hasNextLine()) {
-                String data = Reader.nextLine();
-                s+=data;
+        if(is_path){
+            try {
+                file_name = checkDir(file_name);
+                File my_file = new File(file_name);
+                Scanner Reader = new Scanner(my_file);
+                while (Reader.hasNextLine()) {
+                    String data = Reader.nextLine();
+                    s+=data;
+                }
+                Reader.close();
+            } catch (Exception e) {
+                System.out.println("Error " + e.getMessage());
             }
-            Reader.close();
-        } catch (Exception e) {
-            System.out.println("Error " + e.getMessage());
+        }else
+        {
+            s = file_name;
         }
         if (s.length()>1000) {
             for (int i =0; i<4 ; i++){
@@ -179,61 +183,65 @@ public class Terminal
             //if it dosn't start with / then it's a folder name exist in the current path
             dir_path = current_path + '/' + dir;
         }*/
-        String command=command_side[0];
-        if(command.equalsIgnoreCase("cat")||command.equalsIgnoreCase("date")||command.equalsIgnoreCase("ls")||command.equalsIgnoreCase("pwd"))
-        {
-            if(command.equalsIgnoreCase("cat"))
+        File chk = new File(file_side);
+        if(!chk.exists()){
+            System.out.println("This File Not Exists!");
+        }else{
+            String command=command_side[0];
+            if(command.equalsIgnoreCase("cat")||command.equalsIgnoreCase("date")||command.equalsIgnoreCase("ls")||command.equalsIgnoreCase("pwd"))
             {
-                String[] paths=null;
-                for (int i=1;i<command_side.length;i++)
-                    paths[i] = command_side[i];
-                if(paths == null){
-                    result ="";
-                    System.out.println("Invalid Command Arguments");
-                }else{
-                    result = cat(paths);
-                }
+                if(command.equalsIgnoreCase("cat"))
+                {
+                    String[] paths=null;
+                    for (int i=1;i<command_side.length;i++)
+                        paths[i] = command_side[i];
+                    if(paths == null){
+                        result ="";
+                        System.out.println("Invalid Command Arguments");
+                    }else{
+                        result = cat(paths);
+                    }
 
-            }
-            else if (command.equalsIgnoreCase("date"))
-            {
-                result=date();
-            }
-            else if (command.equalsIgnoreCase("pwd"))
-            {
-                result=pwd();
-            }
-            else if (command.equalsIgnoreCase("ls"))
-            {
-                String[] content=null;
-                if(command_side.length == 1){
-                    content=ls();
                 }
-                else{
-                    content = ls(command_side[1]);
+                else if (command.equalsIgnoreCase("date"))
+                {
+                    result=date();
                 }
-                for (int i=0;i<content.length;i++)
-                    result += content[i] + System.lineSeparator();
+                else if (command.equalsIgnoreCase("pwd"))
+                {
+                    result=pwd();
+                }
+                else if (command.equalsIgnoreCase("ls"))
+                {
+                    String[] content=null;
+                    if(command_side.length == 1){
+                        content=ls();
+                    }
+                    else{
+                        content = ls(command_side[1]);
+                    }
+                    for (int i=0;i<content.length;i++)
+                        result += content[i] + System.lineSeparator();
+                }
+            }
+            else
+                System.out.println("the command u enter cant work ");
+            try
+            {
+                File outFile=new File(file_side);
+                if(!outFile.exists())
+                    outFile.createNewFile();
+                FileWriter write=new FileWriter(outFile,type);
+                BufferedWriter buff=new BufferedWriter(write);
+                buff.write(result);
+                buff.flush();
+                buff.close();
+            }
+            catch (IOException e)
+            {
+                System.out.println(e.getMessage());
             }
         }
-        else
-            System.out.println("the command u enter cant work ");
-        try
-        {
-            File outFile=new File(file_side);
-            if(!outFile.exists())
-                outFile.createNewFile();
-            FileWriter write=new FileWriter(outFile,type);
-            BufferedWriter buff=new BufferedWriter(write);
-            buff.write(result);
-            buff.flush();
-            buff.close();
-        }
-        catch (IOException e)
-        {
-            System.out.println(e.getMessage());
-        }
-
     }
     /**
      * mkdir Function
@@ -390,57 +398,52 @@ public class Terminal
             arguments = par.getArguments();
             switch (command){
                 case "cd":
-                    if(arguments == null){
+                    if(arguments.length == 1){
                         cd();
                     }else{
-                        cd(arguments[0]);
+                        cd(arguments[1]);
                     }
                     break;
                 case "ls":
                     String[] content = null;
-                    if(arguments == null){
+                    if(arguments.length == 1){
                         content = ls();
                     }else{
-                        content = ls(arguments[0]);
+                        content = ls(arguments[1]);
                     }
                     for (int k=0;k<content.length;k++)
                         output += content[i] + System.lineSeparator();
                     break;
                 case "cp":
-                    cp(arguments[0],arguments[1]);
+                    cp(arguments[1],arguments[2]);
                     break;
                 case "cat":
-                    if (arguments.length != 0){
+                    if (arguments.length  > 1){
                         output = cat(arguments);
                     }
                     break;
                 case "more":
-                    if(arguments == null){
-                        more(output);
+                    if(arguments.length == 1){
+                        more(output , false);
+                        output ="";
                     }else{
-                        more(arguments[0]);
+                        more(arguments[1],true);
                     }
                     break;
-                case ">":
-                    redirect(arguments,false);
-                    break;
-                case ">>":
-                    redirect(arguments,true);
-                    break;
                 case "mkdir":
-                    mkdir(arguments[0]);
+                    mkdir(arguments[1]);
                     break;
                 case "rmdir":
-                    rmdir(arguments[0]);
+                    rmdir(arguments[1]);
                     break;
                 case "mv":
-                    mv(arguments[0],arguments[1]);
+                    mv(arguments[1],arguments[2]);
                     break;
                 case "rm":
-                    rm(arguments[0]);
+                    rm(arguments[1]);
                     break;
                 case "args":
-                    args(arguments[0]);
+                    args(arguments[1]);
                     break;
                 case "date":
                     output  = date();
@@ -452,8 +455,8 @@ public class Terminal
                     output = pwd();
                     break;
             }
-            System.out.println(output);
         }
+        System.out.println(output);
     }
     public String cat(String[] files_name ) throws FileNotFoundException {
         String line2;

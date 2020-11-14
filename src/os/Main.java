@@ -58,7 +58,7 @@ public class Main {
                         //System.out.println("This Console Not Cleared");
                         break;
                     case "more":
-                        terminal.more(par.getArguments()[1]);
+                        terminal.more(par.getArguments()[1],true);
                         break;
                     case "pwd":
                         System.out.println(terminal.pwd());
@@ -79,7 +79,6 @@ public class Main {
                         terminal.redirect(par.getArguments(),false);
                         break;
                     case ">>":
-
                         terminal.redirect(par.getArguments(),true);
                         break;
                     case "|":
