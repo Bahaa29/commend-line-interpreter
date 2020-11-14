@@ -27,14 +27,16 @@ public class parser
         }
         else if(input.contains(">")||input.contains(">>"))
         {
-            if(input.contains(">"))
-            {
+            int mark_count=0;
+            for(int k=0;k<input.length();k++){
+                if(input.charAt(k) == '>'){
+                    mark_count++;
+                }
+            }
+            if(mark_count ==1) {
                 split_args = input.split(">");
                 command=">";
-            }
-
-            else
-            {
+            }else {
                 split_args=input.split(">>");
                 command=">>";
             }

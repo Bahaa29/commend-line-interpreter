@@ -16,6 +16,10 @@ public class Main {
         while (working){
             System.out.print(terminal.pwd()+ "$ ");
             line = scan.nextLine();
+            if(line.equalsIgnoreCase("bye")){
+                working =false;
+                break;
+            }
             success = par.parse(line);
             if(success){
                 switch (par.getCmd()){
@@ -80,9 +84,6 @@ public class Main {
                         break;
                     case "|":
                         terminal.pipe(par.getArguments());
-                        break;
-                    case "bye":
-                        working =false;
                         break;
                 }
             }

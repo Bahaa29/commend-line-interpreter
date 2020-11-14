@@ -19,14 +19,32 @@ public class Terminal
         current_path = "/home/mohamed/";
     }
     public void cd(String arg) {
-        arg = checkDir(arg);
-        File file = new File(arg);
-        boolean flag = file.isDirectory();
-        if (flag) {
-            current_path =arg;
-        }
-        else{
-            System.out.println("Invalid Directory path");
+        if(arg.trim().equals("..")){
+            int lastfolder_len=1;
+            String previous_folder="";
+            if(current_path.charAt(current_path.length()-1) == '/'){
+                current_path = current_path.substring(0,current_path.length()-2);
+            }
+            for (int j=current_path.length()-1;j>0;j--){
+                if (current_path.charAt(j) == '/')
+                    break;
+                lastfolder_len ++;
+            }
+            for (int i=0;i<current_path.length()-lastfolder_len;i++){
+                previous_folder += current_path.charAt(i);
+            }
+            System.out.println(previous_folder);
+            current_path = previous_folder;
+        }else{
+            arg = checkDir(arg);
+            File file = new File(arg);
+            boolean flag = file.isDirectory();
+            if (flag) {
+                current_path =arg;
+            }
+            else{
+                System.out.println("Invalid Directory path");
+            }
         }
     }
     public String[] ls() {
@@ -139,64 +157,75 @@ public class Terminal
     }
     public void redirect(String[] Args,boolean type) throws FileNotFoundException {
         String[] command_side;//this array for special command like > >> |
-        String[] file_side;//this array for special command like > >> |
+        String file_side;//this array for special command like > >> |
         String result="";
         command_side=Args[0].split(" ");
-        file_side=Args[1].split(" ");;
+        file_side=Args[1].trim();
+
+        //check dir
+        //On Linux
+        if(file_side.charAt(0) == '/'){
+            //if the it start with / then it's a full path "/home/mohamed"
+            file_side = file_side;
+        }else{
+            //if it dosn't start with / then it's a folder name exist in the current path
+            file_side = current_path + '/' + file_side;
+        }
+        //On Windows
+        /*if(dir.charAt(1) == ':'){
+            //if the it start with / then it's a full path "/home/mohamed"
+            dir_path = dir;
+        }else{
+            //if it dosn't start with / then it's a folder name exist in the current path
+            dir_path = current_path + '/' + dir;
+        }*/
         String command=command_side[0];
         if(command.equalsIgnoreCase("cat")||command.equalsIgnoreCase("date")||command.equalsIgnoreCase("ls")||command.equalsIgnoreCase("pwd"))
         {
-            if(file_side.length==1)
+            if(command.equalsIgnoreCase("cat"))
             {
-                if(command.equalsIgnoreCase("cat"))
-                {
-                    String[] paths=null;
-                    for (int i=1;i<command_side.length;i++)
-                        paths[i] = command_side[i];
-                    if(paths == null){
-                        result ="";
-                        System.out.println("Invalid Command Arguments");
-                    }else{
-                        result = cat(paths);
-                    }
+                String[] paths=null;
+                for (int i=1;i<command_side.length;i++)
+                    paths[i] = command_side[i];
+                if(paths == null){
+                    result ="";
+                    System.out.println("Invalid Command Arguments");
+                }else{
+                    result = cat(paths);
+                }
 
+            }
+            else if (command.equalsIgnoreCase("date"))
+            {
+                result=date();
+            }
+            else if (command.equalsIgnoreCase("pwd"))
+            {
+                result=pwd();
+            }
+            else if (command.equalsIgnoreCase("ls"))
+            {
+                String[] content=null;
+                if(command_side.length == 1){
+                    content=ls();
                 }
-                else if (command.equalsIgnoreCase("date"))
-                {
-                    result=date();
+                else{
+                    content = ls(command_side[1]);
                 }
-                else if (command.equalsIgnoreCase("pwd"))
-                {
-                    result=pwd();
-                }
-                else if (command.equalsIgnoreCase("ls"))
-                {
-                    String[] content=null;
-                    if(command_side.length == 1){
-                        content=ls();
-                    }
-                    else{
-                        content = ls(command_side[1]);
-                    }
-                    for (int i=0;i<content.length;i++)
-                        result += content[i] + System.lineSeparator();
-                }
+                for (int i=0;i<content.length;i++)
+                    result += content[i] + System.lineSeparator();
             }
         }
         else
             System.out.println("the command u enter cant work ");
         try
         {
-            File outFile=new File(file_side[0]);
+            File outFile=new File(file_side);
             if(!outFile.exists())
                 outFile.createNewFile();
             FileWriter write=new FileWriter(outFile,type);
             BufferedWriter buff=new BufferedWriter(write);
-            while(result.length()>0)
-            {
-                buff.write(result);
-                buff.newLine();
-            }
+            buff.write(result);
             buff.flush();
             buff.close();
         }
