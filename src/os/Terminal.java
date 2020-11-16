@@ -9,24 +9,24 @@ import java.util.Scanner;
 public class Terminal
 {
     //This Variable Just Point To The Folder Where iam
-    private String current_path = "/home/mohamed/";
+    private String current_path = "C:\\";
     private String[] commands={"cd", "ls", "rm" , "cp", "mv", "mkdir", "rmdir", "clear", "more", "pwd","cat","args", "date", "help",">",">>"};
 
     public String pwd() {
         return current_path;
     }
     public void cd() {
-        current_path = "/home/mohamed/";
+        current_path = "C:\\\\";
     }
     public void cd(String arg) {
         if(arg.trim().equals("..")){
             int lastfolder_len=1;
             String previous_folder="";
-            if(current_path.charAt(current_path.length()-1) == '/'){
+            if(current_path.charAt(current_path.length()-1) == '\\'){
                 current_path = current_path.substring(0,current_path.length()-2);
             }
             for (int j=current_path.length()-1;j>0;j--){
-                if (current_path.charAt(j) == '/')
+                if (current_path.charAt(j) == '\\')
                     break;
                 lastfolder_len ++;
             }
@@ -166,23 +166,22 @@ public class Terminal
         command_side=Args[0].split(" ");
         file_side=Args[1].trim();
 
-        //check dir
         //On Linux
-        if(file_side.charAt(0) == '/'){
+        /*if(file_side.charAt(0) == '/'){
             //if the it start with / then it's a full path "/home/mohamed"
             file_side = file_side;
         }else{
             //if it dosn't start with / then it's a folder name exist in the current path
             file_side = current_path + '/' + file_side;
-        }
+        }*/
         //On Windows
-        /*if(dir.charAt(1) == ':'){
+        if(file_side.charAt(1) == ':'){
             //if the it start with / then it's a full path "/home/mohamed"
-            dir_path = dir;
+            file_side = file_side;
         }else{
             //if it dosn't start with / then it's a folder name exist in the current path
-            dir_path = current_path + '/' + dir;
-        }*/
+            file_side = current_path + '\\' + file_side;
+        }
         File chk = new File(file_side);
         if(!chk.exists()){
             System.out.println("This File Not Exists!");
@@ -252,21 +251,21 @@ public class Terminal
         //Contain the path of the folder that will be created
         String dir_path=null;
         //On Linux
-        if(dir.charAt(0) == '/'){
-            //if the it start with / then it's a full path "/home/mohamed"
-            dir_path = dir;
-        }else{
-            //if it dosn't start with / then it's a folder name exist in the current path
-            dir_path = current_path + '/' + dir;
-        }
-        //On Windows
-        /*if(dir.charAt(1) == ':'){
+       /* if(dir.charAt(0) == '/'){
             //if the it start with / then it's a full path "/home/mohamed"
             dir_path = dir;
         }else{
             //if it dosn't start with / then it's a folder name exist in the current path
             dir_path = current_path + '/' + dir;
         }*/
+        //On Windows
+        if(dir.charAt(1) == ':'){
+            //if the it start with / then it's a full path "/home/mohamed"
+            dir_path = dir;
+        }else{
+            //if it dosn't start with / then it's a folder name exist in the current path
+            dir_path = current_path + '\\' + dir;
+        }
         File my_dir =  new File(dir_path);
         //create the folder
         boolean status = my_dir.mkdir();
@@ -364,21 +363,21 @@ public class Terminal
     String checkDir(String dir){
         String dir_path=null;
         //On Linux
-        if(dir.charAt(0) == '/'){
-            //if the it start with / then it's a full path "/home/mohamed"
-            dir_path = dir;
-        }else{
-            //if it dosn't start with / then it's a folder name exist in the current path
-            dir_path = current_path + '/' + dir;
-        }
-        //On Windows
-        /*if(dir.charAt(1) == ':'){
+        /*if(dir.charAt(0) == '/'){
             //if the it start with / then it's a full path "/home/mohamed"
             dir_path = dir;
         }else{
             //if it dosn't start with / then it's a folder name exist in the current path
             dir_path = current_path + '/' + dir;
         }*/
+        //On Windows
+        if(dir.charAt(1) == ':'){
+            //if the it start with / then it's a full path "/home/mohamed"
+            dir_path = dir;
+        }else{
+            //if it dosn't start with / then it's a folder name exist in the current path
+            dir_path = current_path + '\\' + dir;
+        }
         File the_dir = new File(dir_path);
         if(!the_dir.exists()){
             System.out.println("This Directory Not Exist!");
@@ -517,7 +516,7 @@ public class Terminal
         }
     }
     public void clear() throws IOException {
-
+        System.out.println("\n".repeat(80));
     }
 
 }

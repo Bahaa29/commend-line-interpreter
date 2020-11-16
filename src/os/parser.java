@@ -82,7 +82,7 @@ public class parser
                 case "help":
                 case "clear":
                 case "date":
-                    if(length > 1){
+                    if(length > 0){
                         System.out.println("Commands Dosn't Take Any Arguments!");
                         return false;
                     }
