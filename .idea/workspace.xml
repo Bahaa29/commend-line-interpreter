@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f3209ed2-fc9f-434c-88c1-157de209ea86" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/commend-line-interpreter/os/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/commend-line-interpreter/os/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/commend-line-interpreter/os/Terminal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/commend-line-interpreter/os/Terminal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/commend-line-interpreter/os/parser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/commend-line-interpreter/os/parser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/os/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/os/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/os/Terminal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/os/Terminal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/os/parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/os/parser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +31,9 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunManager">
@@ -51,6 +52,18 @@
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
@@ -169,10 +182,15 @@
     <option name="LAST_COMMIT_MESSAGE" value="Pipes Fix" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="536" y="254" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1605017560748">
-      <screen x="0" y="0" width="1366" height="723" />
+    <state x="361" y="73" key="#Project_Structure" timestamp="1605577808081">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="73" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1605577808081" />
+    <state x="603" y="289" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1605577862685">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="536" y="254" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1366.723@0.0.1366.723" timestamp="1605017560748" />
+    <state x="603" y="289" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.824@0.0.1536.824" timestamp="1605577862685" />
     <state x="254" y="0" width="858" height="722" key="CommitChangelistDialog2" timestamp="1605363086302">
       <screen x="0" y="0" width="1366" height="723" />
     </state>
@@ -185,22 +203,26 @@
       <screen x="0" y="0" width="1366" height="723" />
     </state>
     <state x="538" y="278" key="Github.Dialog.Accounts.Choose/0.0.1366.723@0.0.1366.723" timestamp="1605051529756" />
-    <state width="1320" height="163" key="GridCell.Tab.0.bottom" timestamp="1605397841883">
-      <screen x="0" y="0" width="1366" height="723" />
+    <state width="1493" height="294" key="GridCell.Tab.0.bottom" timestamp="1605584068010">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1320" height="163" key="GridCell.Tab.0.bottom/0.0.1366.723@0.0.1366.723" timestamp="1605397841883" />
-    <state width="1320" height="163" key="GridCell.Tab.0.center" timestamp="1605397841882">
-      <screen x="0" y="0" width="1366" height="723" />
+    <state width="1493" height="294" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605584068010" />
+    <state width="1493" height="294" key="GridCell.Tab.0.center" timestamp="1605584068010">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1320" height="163" key="GridCell.Tab.0.center/0.0.1366.723@0.0.1366.723" timestamp="1605397841882" />
-    <state width="1320" height="163" key="GridCell.Tab.0.left" timestamp="1605397841882">
-      <screen x="0" y="0" width="1366" height="723" />
+    <state width="1493" height="294" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1605584068010" />
+    <state width="1493" height="294" key="GridCell.Tab.0.left" timestamp="1605584068009">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1320" height="163" key="GridCell.Tab.0.left/0.0.1366.723@0.0.1366.723" timestamp="1605397841882" />
-    <state width="1320" height="163" key="GridCell.Tab.0.right" timestamp="1605397841883">
-      <screen x="0" y="0" width="1366" height="723" />
+    <state width="1493" height="294" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1605584068009" />
+    <state width="1493" height="294" key="GridCell.Tab.0.right" timestamp="1605584068010">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1320" height="163" key="GridCell.Tab.0.right/0.0.1366.723@0.0.1366.723" timestamp="1605397841883" />
+    <state width="1493" height="294" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1605584068010" />
     <state width="1320" height="205" key="GridCell.Tab.1.bottom" timestamp="1605369310078">
       <screen x="0" y="0" width="1366" height="723" />
     </state>
@@ -221,14 +243,16 @@
       <screen x="0" y="0" width="1366" height="723" />
     </state>
     <state x="184" y="0" key="SettingsEditor/0.0.1366.723@0.0.1366.723" timestamp="1605124568608" />
-    <state x="283" y="98" width="800" height="527" key="Vcs.Push.Dialog.v2" timestamp="1605363095451">
-      <screen x="0" y="0" width="1366" height="723" />
+    <state x="318" y="112" width="800" height="527" key="Vcs.Push.Dialog.v2" timestamp="1605584117810">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="283" y="98" width="800" height="527" key="Vcs.Push.Dialog.v2/0.0.1366.723@0.0.1366.723" timestamp="1605363095451" />
-    <state x="369" y="190" key="com.intellij.ide.util.TipDialog" timestamp="1605017542766">
-      <screen x="0" y="0" width="1366" height="723" />
+    <state x="318" y="112" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1605584117810" />
+    <state x="415" y="217" key="com.intellij.ide.util.TipDialog" timestamp="1605578605379">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="369" y="190" key="com.intellij.ide.util.TipDialog/0.0.1366.723@0.0.1366.723" timestamp="1605017542766" />
+    <state x="415" y="217" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1605578605379" />
     <state x="350" y="155" key="git4idea.merge.GitPullDialog" timestamp="1605369286363">
       <screen x="0" y="0" width="1366" height="723" />
     </state>
@@ -237,10 +261,11 @@
       <screen x="0" y="0" width="1366" height="723" />
     </state>
     <state x="347" y="158" key="run.anything.popup/0.0.1366.723@0.0.1366.723" timestamp="1605106805295" />
-    <state x="346" y="44" width="672" height="678" key="search.everywhere.popup" timestamp="1605145946555">
-      <screen x="0" y="0" width="1366" height="723" />
+    <state x="389" y="50" width="756" height="773" key="search.everywhere.popup" timestamp="1605579385048">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="346" y="44" width="672" height="678" key="search.everywhere.popup/0.0.1366.723@0.0.1366.723" timestamp="1605145946555" />
+    <state x="389" y="50" width="756" height="773" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1605579385048" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

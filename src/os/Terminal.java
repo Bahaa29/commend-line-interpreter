@@ -515,7 +515,7 @@ public class Terminal
             System.out.println("Command Not Found!");
         }
     }
-    public void clear() throws IOException {
+    public void clear()  {
         System.out.println("\n".repeat(80));
     }
 

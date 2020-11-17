@@ -56,6 +56,7 @@ public class Main {
                         break;
                     case "clear":
                         //System.out.println("This Console Not Cleared");
+                        terminal.clear();
                         break;
                     case "more":
                         terminal.more(par.getArguments()[1],true);
@@ -84,6 +85,7 @@ public class Main {
                     case "|":
                         terminal.pipe(par.getArguments());
                         break;
+
                 }
             }
         }
